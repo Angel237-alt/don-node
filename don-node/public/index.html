@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Don Node - Pedidos</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🍕 Don Node</h1>
+        <form action="/pedidos" method="post">
+
+            <div class="campo">
+                <label>Nombre del cliente</label>
+                <input type="text" name="nombre" required>
+            </div>
+
+            <div class="campo">
+                <label>Tamaño de la pizza</label>
+                <select name="tamanio" required>
+                    <option value="chica">Chica — $3.990 (hasta 3 ingredientes)</option>
+                    <option value="mediana">Mediana — $5.990 (hasta 3 ingredientes)</option>
+                    <option value="grande">Grande — $8.490 (hasta 3 ingredientes)</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label>Ingredientes (mínimo 1)</label>
+                <div class="checks">
+                    <label><input type="checkbox" name="ingredientes" value="Jamón"> Jamón</label>
+                    <label><input type="checkbox" name="ingredientes" value="Queso extra"> Queso extra</label>
+                    <label><input type="checkbox" name="ingredientes" value="Champiñones"> Champiñones</label>
+                    <label><input type="checkbox" name="ingredientes" value="Aceitunas"> Aceitunas</label>
+                    <label><input type="checkbox" name="ingredientes" value="Cebolla"> Cebolla</label>
+                    <label><input type="checkbox" name="ingredientes" value="Pimentón"> Pimentón</label>
+                    <label><input type="checkbox" name="ingredientes" value="Tocino"> Tocino</label>
+                </div>
+            </div>
+
+            <div class="campo">
+                <label>Cantidad</label>
+                <input type="number" name="cantidad" min="1" value="1" required>
+            </div>
+
+            <button type="submit">Registrar pedido</button>
+        </form>
+        <a href="/pedidos/lista" class="link">Ver lista de pedidos →</a>
+    </div>
+</body>
+</html>
